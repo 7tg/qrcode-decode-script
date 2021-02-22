@@ -16,6 +16,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     res = create_qr_data(args.data)
-
     with open(args.out_file, 'w') as file:
         json.dump(res.code, file, indent=2, sort_keys=True, ensure_ascii=False)
